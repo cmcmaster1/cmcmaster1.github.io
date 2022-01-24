@@ -3,6 +3,8 @@ title: "Chris McMaster"
 description: |
   Chris McMaster
 output_dir: "docs"
+collections:
+  posts
 twitter:
   site: "@DrCMcMaster"
 navbar:

@@ -1,7 +1,9 @@
 ---
 title: "Forecasting the Future in Rheumatoid Arthritis"
+site: distill::distill_website
+collections: posts
 description: |
-  A short description of the post.
+  Predicting future RA disease activity.
 author:
   - name: Chris McMaster
     url: https://chrismcmaster.com
