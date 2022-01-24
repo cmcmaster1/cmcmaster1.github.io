@@ -1,9 +1,34 @@
 ---
 title: "About me"
-description: |
-  Some additional details about the blog
+editor_options: 
+  markdown: 
+    wrap: 72
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
 ```
+
+I am a physician (rheumatology and clinical pharmacology) and clinical
+data scientist. Aside from my clinical work, I am the Data Science Lead
+in the Medicines Optimisation Service at Austin Health and a PhD student
+at the University of Melbourne, studying applied machine learning in
+pharmacovigilance.
+
+## Education
+
+-   PhD in Machine Learning\
+    University of Melbourne\
+    2021 - present
+
+-   Bachelor of Medicine/Bachelor of Surgery\
+    University of Melbourne\
+    2009 - 2013
+
+-   Bachelor of Science / Bachelor of Arts\
+    University of Tasmania\
+    2005 - 2008
+
+-   Graduate Diploma in Biostatistics\
+    Monash University\
+    2012-2015

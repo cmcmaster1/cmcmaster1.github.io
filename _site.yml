@@ -3,10 +3,18 @@ title: "Chris McMaster"
 description: |
   Chris McMaster
 output_dir: "docs"
+twitter:
+  site: "@DrCMcMaster"
 navbar:
   right:
     - text: "Home"
       href: index.html
     - text: "About"
       href: about.html
+    - icon: fas fa-graduation-cap
+      href: https://scholar.google.co.uk/citations?user=saf4O9kAAAAJ
+    - icon: fab fa-github
+      href: https://github.com/cmcmaster1
+    - icon: fab fa-linkedin
+      href: https://www.linkedin.com/in/mcmastc1/
 output: distill::distill_article
