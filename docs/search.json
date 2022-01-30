@@ -4,15 +4,15 @@
       "path": "about.html",
       "title": "About me",
       "author": [],
-      "contents": "\nI am a physician (rheumatology and clinical pharmacology) and clinical data scientist. Aside from my clinical work, I am the Data Science Lead in the Medicines Optimisation Service at Austin Health and a PhD student at the University of Melbourne, studying applied machine learning in pharmacovigilance.\nEducation\nPhD in Machine Learning\nUniversity of Melbourne\n2021 - present\nBachelor of Medicine/Bachelor of Surgery\nUniversity of Melbourne\n2009 - 2013\nBachelor of Science / Bachelor of Arts\nUniversity of Tasmania\n2005 - 2008\nGraduate Diploma in Biostatistics\nMonash University\n2012-2015\n\n\n\n",
-      "last_modified": "2022-01-30T13:51:29+11:00"
+      "contents": "\nI am a physician (rheumatology and clinical pharmacology) and clinical data scientist. Aside from my clinical work, I am the Data Science Lead in the Medicines Optimisation Service at Austin Health and a PhD student at the University of Melbourne, studying applied machine learning in pharmacovigilance.\nEducation\nPhD in Machine Learning\nUniversity of Melbourne\n2021 - present\nBachelor of Medicine/Bachelor of Surgery\nUniversity of Melbourne\n2009 - 2013\nBachelor of Science / Bachelor of Arts (Mathematics, Physics, Philosophy)\nUniversity of Tasmania\n2005 - 2008\nGraduate Diploma in Biostatistics\nMonash University\n2012-2015\n\n\n\n",
+      "last_modified": "2022-01-30T14:03:59+11:00"
     },
     {
       "path": "index.html",
       "title": "Chris McMaster",
       "author": [],
       "contents": "\n\n\n\n",
-      "last_modified": "2022-01-30T13:51:30+11:00"
+      "last_modified": "2022-01-30T14:03:59+11:00"
     }
   ],
   "collections": ["posts/posts.json"]
