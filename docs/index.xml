@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
+  <channel>
+    <title>chrismcmaster.com</title>
+    <link>https://chrismcmaster.com</link>
+    <atom:link href="https://chrismcmaster.com/index.xml" rel="self" type="application/rss+xml"/>
+    <description>Chris McMaster
+</description>
+    <image>
+      <title>chrismcmaster.com</title>
+      <url>https://chrismcmaster.com/icon/favicon.ico</url>
+      <link>https://chrismcmaster.com</link>
+    </image>
+    <generator>Distill</generator>
+    <lastBuildDate>Sun, 30 Jan 2022 00:00:00 +0000</lastBuildDate>
+    <item>
+      <title>Drug Safety &amp; Australia's Digital Health Infrastructure</title>
+      <dc:creator>Chris McMaster</dc:creator>
+      <link>https://chrismcmaster.com/posts/2022-01-25-unbuilt-drug-safety-australias-digital-health-infrastructure</link>
+      <description>The problem of drug safety is a window into Australia's failure to invest in centralised digital health infrasctructure.</description>
+      <guid>https://chrismcmaster.com/posts/2022-01-25-unbuilt-drug-safety-australias-digital-health-infrastructure</guid>
+      <pubDate>Sun, 30 Jan 2022 00:00:00 +0000</pubDate>
+      <media:content url="https://chrismcmaster.com/posts/2022-01-25-unbuilt-drug-safety-australias-digital-health-infrastructure/unbuilt-drug-safety-australias-digital-health-infrastructure_files/figure-html5/unnamed-chunk-1-1.png" medium="image" type="image/png" width="1248" height="768"/>
+    </item>
+    <item>
+      <title>Machine Learning To Get Stuff Done</title>
+      <dc:creator>Chris McMaster</dc:creator>
+      <link>https://chrismcmaster.com/posts/2022-01-29-machine-learning-to-get-stuff-done</link>
+      <description>How I read 38,000 PET-CT reports in a matter of minutes.</description>
+      <guid>https://chrismcmaster.com/posts/2022-01-29-machine-learning-to-get-stuff-done</guid>
+      <pubDate>Sat, 29 Jan 2022 00:00:00 +0000</pubDate>
+      <media:content url="https://chrismcmaster.com/posts/2022-01-29-machine-learning-to-get-stuff-done/machine-learning-to-get-stuff-done_files/figure-html5/unnamed-chunk-1-1.png" medium="image" type="image/png" width="1248" height="768"/>
+    </item>
+    <item>
+      <title>Forecasting the Future in Rheumatoid Arthritis</title>
+      <dc:creator>Chris McMaster</dc:creator>
+      <link>https://chrismcmaster.com/posts/2022-01-24-forecasting-the-future-in-rheumatoid-arthritis</link>
+      <description>Predicting future RA disease activity.</description>
+      <guid>https://chrismcmaster.com/posts/2022-01-24-forecasting-the-future-in-rheumatoid-arthritis</guid>
+      <pubDate>Mon, 24 Jan 2022 00:00:00 +0000</pubDate>
+      <media:content url="https://chrismcmaster.com/posts/2022-01-24-forecasting-the-future-in-rheumatoid-arthritis/forecasting-the-future-in-rheumatoid-arthritis_files/figure-html5/unnamed-chunk-7-1.png" medium="image" type="image/png" width="1248" height="768"/>
+    </item>
+  </channel>
+</rss>

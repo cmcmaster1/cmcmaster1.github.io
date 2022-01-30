@@ -1,9 +1,10 @@
 ---
-title: "Unbuilt: Drug Safety & Australia's Digital Health Infrastructure"
+title: "Drug Safety & Australia's Digital Health Infrastructure"
 description: |
-  The problem of drug safety is a window into the failings of Australia's investment in digital health.
+  The problem of drug safety is a window into Australia's failure to invest in centralised digital health infrasctructure.
 author:
   - name: Chris McMaster
+    affiliation: University of Melbourne
     url: https://chrismcmaster.com
 date: 2022-01-30
 draft: false
@@ -27,7 +28,43 @@ John wakes up one morning with sharp chest pains, which he dismisses as just ano
 
 Now contrast this with Lisa. Lisa is an accountant at a large bank. Many years ago, when she was working her way up through the corporate ladder, she had what she calls "the forgotten year". It was a year of feeling constantly tired, noticing weird rashes, debilitating joint pains and endless trips to many doctors before she was eventually diagnosed with systemic lupus erythematosus (SLE), an autoimmune condition that can affect almost any part of the body. Pham tried a few different medications, before she was eventually enrolled in a clinical trial. This new medication was novel and experimental at the time, but it seemed to work better than the others. In fact, it worked so well that the trial was successful and the drug was eventually approved by the TGA. Fast forward 8 years, Lisa's SLE has remained in remission. She has been in good health, although she has started noticing a tremor in her hand. Eventually, the tremor gets worse and she sees her GP, who orders some tests and refers her to a neurologist. She is eventually diagnosed with a movement disorder, a broad category of disorders, including Parkinson's disease. Nobody reports this to the TGA, no known link exists and she has been on this medication for 8 years. But there are 100s of people around the world slowly developing these symptoms, all in isolation with nobody to connect the dots. Eventually, this signal is detected and a warning is introduced. After many years, a gene is identified that predisposes to this risk. But 100s more cases occur before this is known and testing is implemented.
 
-What both of these (fictional) cases illustrate is a failure. Not a failure of individuals, but a failure of a system. Pharmacovigilance is the "science and activities relating to the detection, assessment, understanding and prevention of adverse effects or any other medicine/vaccine related problem." @noauthor_undated-wr Whilst pharmacovigilance is a necessary part of the drug development phase, many safety signals are too rare (less than one in one thousand) or too delayed to capture in a clinical trials. So we must turn instead to what happens after a drug goes to market and identify these safety signals when it is already in use. For such a critical component in the safe development of new and novel medications, one would expect a sophisticated, well-resourced infrastructure that leverages all the advantages of our digital health systems. What we see instead is nothing. Fragmented systems and a lack of vision has lead to a complete void.
+What both of these (fictional) cases illustrate is a failure. Not a failure of individuals, but a failure of a system. Pharmacovigilance is the "science and activities relating to the detection, assessment, understanding and prevention of adverse effects or any other medicine/vaccine related problem." @noauthor_undated-wr Whilst pharmacovigilance is a necessary part of the drug development phase, many safety signals are too rare (less than one in one thousand) or too delayed to capture in a clinical trials --- and this is becoming even more critical as provisional approvals increase, meaning drugs being released with less data and for a smaller patient population where every scrap of data counts (see figure below on provisional approvals). So we must turn instead to what happens after a drug goes to market and identify these safety signals when it is already in use. For such a critical component in the safe development of new and novel medications, one would expect a sophisticated, well-resourced infrastructure that leverages all the advantages of our digital health systems. What we see instead is nothing. Fragmented systems and a lack of vision has lead to a complete void.
+
+```{r echo=FALSE, message=FALSE, warning=FALSE}
+library(rvest)
+library(tidyverse)
+library(lubridate)
+
+approvals <- read_html("https://www.tga.gov.au/ws-designation-notices-index?search_api_views_fulltext=&field_designation=3&sort_by=field_effective_date&sort_order=DESC&items_per_page=All")
+
+dates <- approvals %>% 
+  html_elements(".views-field.views-field-field-effective-date.floatright.clearright.alignright") %>% 
+  html_text() %>% 
+  str_extract("\\d{2}/\\d{2}/\\d{4}")
+
+plot_data <- tibble(months = dates) %>% 
+  mutate(months = dmy(months)) %>% 
+  mutate(months = tsibble::yearquarter(months)) %>% 
+  count(months) %>% 
+  mutate(Quarter = as.numeric(months),
+         plot_months = as_date(months),
+         label_months = as.character(months)) %>% 
+  filter(label_months != "2021 Q4")
+
+everysecond <- function(x){
+  x <- sort(unique(x))
+  x[seq(2, length(x), 2)] <- ""
+  x
+}
+
+ggplot(plot_data, aes(x = plot_months, y = n)) + 
+  geom_point(size = 4) +
+  geom_smooth(se = FALSE, size = 3) +
+  ylab("Provisional Approvals") +
+  xlab("Quarters") +
+  ggtitle("TGA Provisional Approvals") +
+  cowplot::theme_cowplot(font_size = 20)
+```
 
 ## The Current Landscape
 

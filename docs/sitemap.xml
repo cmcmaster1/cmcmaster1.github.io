@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" version="1.0">
+  <url>
+    <loc>https://chrismcmaster.com/about.html</loc>
+    <lastmod>2022-01-30T14:03:13+11:00</lastmod>
+  </url>
+  <url>
+    <loc>https://chrismcmaster.com/</loc>
+    <lastmod>2022-01-24T17:30:12+11:00</lastmod>
+  </url>
+  <url>
+    <loc>https://chrismcmaster.com/posts/2022-01-25-unbuilt-drug-safety-australias-digital-health-infrastructure/</loc>
+    <lastmod>2022-01-30T16:51:16+11:00</lastmod>
+  </url>
+  <url>
+    <loc>https://chrismcmaster.com/posts/2022-01-29-machine-learning-to-get-stuff-done/</loc>
+    <lastmod>2022-01-30T13:50:55+11:00</lastmod>
+  </url>
+  <url>
+    <loc>https://chrismcmaster.com/posts/2022-01-24-forecasting-the-future-in-rheumatoid-arthritis/</loc>
+    <lastmod>2022-01-25T11:00:00+11:00</lastmod>
+  </url>
+</urlset>

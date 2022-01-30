@@ -1,5 +1,5 @@
 name: "blog"
-title: "Chris McMaster"
+title: "chrismcmaster.com"
 description: |
   Chris McMaster
 favicon: icon/favicon.ico
@@ -24,3 +24,4 @@ navbar:
     - icon: fab fa-linkedin
       href: https://www.linkedin.com/in/mcmastc1/
 output: distill::distill_article
+base_url: https://chrismcmaster.com
