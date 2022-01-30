@@ -17,6 +17,23 @@
     "input_file": {}
   },
   {
+    "path": "posts/2022-01-25-unbuilt-drug-safety-australias-digital-health-infrastructure/",
+    "title": "Unbuilt: Drug Safety & Australia's Digital Health Infrastructure",
+    "description": "The problem of drug safety is a window into the failings of Australia's investment in digital health.",
+    "author": [
+      {
+        "name": "Chris McMaster",
+        "url": "https://chrismcmaster.com"
+      }
+    ],
+    "date": "2022-01-30",
+    "categories": [],
+    "contents": "\n      \n        \n      \n    \n  ",
+    "preview": {},
+    "last_modified": "2022-01-30T16:01:20+11:00",
+    "input_file": "unbuilt-drug-safety-australias-digital-health-infrastructure.knit.md"
+  },
+  {
     "path": "posts/2022-01-24-forecasting-the-future-in-rheumatoid-arthritis/",
     "title": "Forecasting the Future in Rheumatoid Arthritis",
     "description": "Predicting future RA disease activity.",
