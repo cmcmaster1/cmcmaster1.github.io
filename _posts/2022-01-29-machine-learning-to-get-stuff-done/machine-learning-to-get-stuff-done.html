@@ -87,637 +87,39 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 
 
   <!--radix_placeholder_meta_tags-->
-  <title>Chris McMaster: About me</title>
+  <title>Machine Learning To Get Stuff Done</title>
+
+  <meta property="description" itemprop="description" content="How I read 38,000 PET-CT reports in a matter of minutes."/>
 
 
-  <link rel="icon" type="image/vnd.microsoft.icon" href="icon/favicon.ico"/>
-
+  <!--  https://schema.org/Article -->
+  <meta property="article:published" itemprop="datePublished" content="2022-01-29"/>
+  <meta property="article:created" itemprop="dateCreated" content="2022-01-29"/>
+  <meta name="article:author" content="Chris McMaster"/>
 
   <!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
-  <meta property="og:title" content="Chris McMaster: About me"/>
+  <meta property="og:title" content="Machine Learning To Get Stuff Done"/>
   <meta property="og:type" content="article"/>
+  <meta property="og:description" content="How I read 38,000 PET-CT reports in a matter of minutes."/>
   <meta property="og:locale" content="en_US"/>
-  <meta property="og:site_name" content="Chris McMaster"/>
 
   <!--  https://dev.twitter.com/cards/types/summary -->
   <meta property="twitter:card" content="summary"/>
-  <meta property="twitter:title" content="Chris McMaster: About me"/>
-  <meta property="twitter:site" content="@DrCMcMaster"/>
+  <meta property="twitter:title" content="Machine Learning To Get Stuff Done"/>
+  <meta property="twitter:description" content="How I read 38,000 PET-CT reports in a matter of minutes."/>
 
   <!--/radix_placeholder_meta_tags-->
   <!--radix_placeholder_rmarkdown_metadata-->
 
   <script type="text/json" id="radix-rmarkdown-metadata">
-  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","editor_options"]}},"value":[{"type":"character","attributes":{},"value":["About me"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["markdown"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["wrap"]}},"value":[{"type":"integer","attributes":{},"value":[72]}]}]}]}
+  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","date","output","css"]}},"value":[{"type":"character","attributes":{},"value":["Machine Learning To Get Stuff Done"]},{"type":"character","attributes":{},"value":["How I read 38,000 PET-CT reports in a matter of minutes.\n"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","url"]}},"value":[{"type":"character","attributes":{},"value":["Chris McMaster"]},{"type":"character","attributes":{},"value":["https://chrismcmaster.com"]}]}]},{"type":"character","attributes":{},"value":["2022-01-29"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained","includes"]}},"value":[{"type":"logical","attributes":{},"value":[false]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["in_header"]}},"value":[{"type":"character","attributes":{},"value":["banner.html"]}]}]}]},{"type":"character","attributes":{},"value":["ml.css"]}]}
   </script>
   <!--/radix_placeholder_rmarkdown_metadata-->
+  
+  <script type="text/json" id="radix-resource-manifest">
+  {"type":"character","attributes":{},"value":["banner.html","cranes.webp","images/paste-35A12A44.png","images/paste-81183CA6.png","machine-learning-to-get-stuff-done_files/anchor-4.2.2/anchor.min.js","machine-learning-to-get-stuff-done_files/bowser-1.9.3/bowser.min.js","machine-learning-to-get-stuff-done_files/distill-2.2.21/template.v2.js","machine-learning-to-get-stuff-done_files/figure-html5/unnamed-chunk-1-1.png","machine-learning-to-get-stuff-done_files/header-attrs-2.11/header-attrs.js","machine-learning-to-get-stuff-done_files/jquery-3.6.0/jquery-3.6.0.js","machine-learning-to-get-stuff-done_files/jquery-3.6.0/jquery-3.6.0.min.js","machine-learning-to-get-stuff-done_files/jquery-3.6.0/jquery-3.6.0.min.map","machine-learning-to-get-stuff-done_files/popper-2.6.0/popper.min.js","machine-learning-to-get-stuff-done_files/tippy-6.2.7/tippy-bundle.umd.min.js","machine-learning-to-get-stuff-done_files/tippy-6.2.7/tippy-light-border.css","machine-learning-to-get-stuff-done_files/tippy-6.2.7/tippy.css","machine-learning-to-get-stuff-done_files/tippy-6.2.7/tippy.umd.min.js","machine-learning-to-get-stuff-done_files/twitter-widget-0.0.1/widgets.js","machine-learning-to-get-stuff-done_files/webcomponents-2.0.0/webcomponents.js","ml.css","prodigy.svg","roc.json"]}
+  </script>
   <!--radix_placeholder_navigation_in_header-->
-  <meta name="distill:offset" content=""/>
-
-  <script type="application/javascript">
-
-    window.headroom_prevent_pin = false;
-
-    window.document.addEventListener("DOMContentLoaded", function (event) {
-
-      // initialize headroom for banner
-      var header = $('header').get(0);
-      var headerHeight = header.offsetHeight;
-      var headroom = new Headroom(header, {
-        tolerance: 5,
-        onPin : function() {
-          if (window.headroom_prevent_pin) {
-            window.headroom_prevent_pin = false;
-            headroom.unpin();
-          }
-        }
-      });
-      headroom.init();
-      if(window.location.hash)
-        headroom.unpin();
-      $(header).addClass('headroom--transition');
-
-      // offset scroll location for banner on hash change
-      // (see: https://github.com/WickyNilliams/headroom.js/issues/38)
-      window.addEventListener("hashchange", function(event) {
-        window.scrollTo(0, window.pageYOffset - (headerHeight + 25));
-      });
-
-      // responsive menu
-      $('.distill-site-header').each(function(i, val) {
-        var topnav = $(this);
-        var toggle = topnav.find('.nav-toggle');
-        toggle.on('click', function() {
-          topnav.toggleClass('responsive');
-        });
-      });
-
-      // nav dropdowns
-      $('.nav-dropbtn').click(function(e) {
-        $(this).next('.nav-dropdown-content').toggleClass('nav-dropdown-active');
-        $(this).parent().siblings('.nav-dropdown')
-           .children('.nav-dropdown-content').removeClass('nav-dropdown-active');
-      });
-      $("body").click(function(e){
-        $('.nav-dropdown-content').removeClass('nav-dropdown-active');
-      });
-      $(".nav-dropdown").click(function(e){
-        e.stopPropagation();
-      });
-    });
-  </script>
-
-  <style type="text/css">
-
-  /* Theme (user-documented overrideables for nav appearance) */
-
-  .distill-site-nav {
-    color: rgba(255, 255, 255, 0.8);
-    background-color: #0F2E3D;
-    font-size: 15px;
-    font-weight: 300;
-  }
-
-  .distill-site-nav a {
-    color: inherit;
-    text-decoration: none;
-  }
-
-  .distill-site-nav a:hover {
-    color: white;
-  }
-
-  @media print {
-    .distill-site-nav {
-      display: none;
-    }
-  }
-
-  .distill-site-header {
-
-  }
-
-  .distill-site-footer {
-
-  }
-
-
-  /* Site Header */
-
-  .distill-site-header {
-    width: 100%;
-    box-sizing: border-box;
-    z-index: 3;
-  }
-
-  .distill-site-header .nav-left {
-    display: inline-block;
-    margin-left: 8px;
-  }
-
-  @media screen and (max-width: 768px) {
-    .distill-site-header .nav-left {
-      margin-left: 0;
-    }
-  }
-
-
-  .distill-site-header .nav-right {
-    float: right;
-    margin-right: 8px;
-  }
-
-  .distill-site-header a,
-  .distill-site-header .title {
-    display: inline-block;
-    text-align: center;
-    padding: 14px 10px 14px 10px;
-  }
-
-  .distill-site-header .title {
-    font-size: 18px;
-    min-width: 150px;
-  }
-
-  .distill-site-header .logo {
-    padding: 0;
-  }
-
-  .distill-site-header .logo img {
-    display: none;
-    max-height: 20px;
-    width: auto;
-    margin-bottom: -4px;
-  }
-
-  .distill-site-header .nav-image img {
-    max-height: 18px;
-    width: auto;
-    display: inline-block;
-    margin-bottom: -3px;
-  }
-
-
-
-  @media screen and (min-width: 1000px) {
-    .distill-site-header .logo img {
-      display: inline-block;
-    }
-    .distill-site-header .nav-left {
-      margin-left: 20px;
-    }
-    .distill-site-header .nav-right {
-      margin-right: 20px;
-    }
-    .distill-site-header .title {
-      padding-left: 12px;
-    }
-  }
-
-
-  .distill-site-header .nav-toggle {
-    display: none;
-  }
-
-  .nav-dropdown {
-    display: inline-block;
-    position: relative;
-  }
-
-  .nav-dropdown .nav-dropbtn {
-    border: none;
-    outline: none;
-    color: rgba(255, 255, 255, 0.8);
-    padding: 16px 10px;
-    background-color: transparent;
-    font-family: inherit;
-    font-size: inherit;
-    font-weight: inherit;
-    margin: 0;
-    margin-top: 1px;
-    z-index: 2;
-  }
-
-  .nav-dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: white;
-    min-width: 200px;
-    border: 1px solid rgba(0,0,0,0.15);
-    border-radius: 4px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.1);
-    z-index: 1;
-    margin-top: 2px;
-    white-space: nowrap;
-    padding-top: 4px;
-    padding-bottom: 4px;
-  }
-
-  .nav-dropdown-content hr {
-    margin-top: 4px;
-    margin-bottom: 4px;
-    border: none;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-  }
-
-  .nav-dropdown-active {
-    display: block;
-  }
-
-  .nav-dropdown-content a, .nav-dropdown-content .nav-dropdown-header {
-    color: black;
-    padding: 6px 24px;
-    text-decoration: none;
-    display: block;
-    text-align: left;
-  }
-
-  .nav-dropdown-content .nav-dropdown-header {
-    display: block;
-    padding: 5px 24px;
-    padding-bottom: 0;
-    text-transform: uppercase;
-    font-size: 14px;
-    color: #999999;
-    white-space: nowrap;
-  }
-
-  .nav-dropdown:hover .nav-dropbtn {
-    color: white;
-  }
-
-  .nav-dropdown-content a:hover {
-    background-color: #ddd;
-    color: black;
-  }
-
-  .nav-right .nav-dropdown-content {
-    margin-left: -45%;
-    right: 0;
-  }
-
-  @media screen and (max-width: 768px) {
-    .distill-site-header a, .distill-site-header .nav-dropdown  {display: none;}
-    .distill-site-header a.nav-toggle {
-      float: right;
-      display: block;
-    }
-    .distill-site-header .title {
-      margin-left: 0;
-    }
-    .distill-site-header .nav-right {
-      margin-right: 0;
-    }
-    .distill-site-header {
-      overflow: hidden;
-    }
-    .nav-right .nav-dropdown-content {
-      margin-left: 0;
-    }
-  }
-
-
-  @media screen and (max-width: 768px) {
-    .distill-site-header.responsive {position: relative; min-height: 500px; }
-    .distill-site-header.responsive a.nav-toggle {
-      position: absolute;
-      right: 0;
-      top: 0;
-    }
-    .distill-site-header.responsive a,
-    .distill-site-header.responsive .nav-dropdown {
-      display: block;
-      text-align: left;
-    }
-    .distill-site-header.responsive .nav-left,
-    .distill-site-header.responsive .nav-right {
-      width: 100%;
-    }
-    .distill-site-header.responsive .nav-dropdown {float: none;}
-    .distill-site-header.responsive .nav-dropdown-content {position: relative;}
-    .distill-site-header.responsive .nav-dropdown .nav-dropbtn {
-      display: block;
-      width: 100%;
-      text-align: left;
-    }
-  }
-
-  /* Site Footer */
-
-  .distill-site-footer {
-    width: 100%;
-    overflow: hidden;
-    box-sizing: border-box;
-    z-index: 3;
-    margin-top: 30px;
-    padding-top: 30px;
-    padding-bottom: 30px;
-    text-align: center;
-  }
-
-  /* Headroom */
-
-  d-title {
-    padding-top: 6rem;
-  }
-
-  @media print {
-    d-title {
-      padding-top: 4rem;
-    }
-  }
-
-  .headroom {
-    z-index: 1000;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-  }
-
-  .headroom--transition {
-    transition: all .4s ease-in-out;
-  }
-
-  .headroom--unpinned {
-    top: -100px;
-  }
-
-  .headroom--pinned {
-    top: 0;
-  }
-
-  /* adjust viewport for navbar height */
-  /* helps vertically center bootstrap (non-distill) content */
-  .min-vh-100 {
-    min-height: calc(100vh - 100px) !important;
-  }
-
-  </style>
-
-  <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
-  <link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet"/>
-  <link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet"/>
-  <script src="site_libs/headroom-0.9.4/headroom.min.js"></script>
-  <script src="site_libs/autocomplete-0.37.1/autocomplete.min.js"></script>
-  <script src="site_libs/fuse-6.4.1/fuse.min.js"></script>
-
-  <script type="application/javascript">
-
-  function getMeta(metaName) {
-    var metas = document.getElementsByTagName('meta');
-    for (let i = 0; i < metas.length; i++) {
-      if (metas[i].getAttribute('name') === metaName) {
-        return metas[i].getAttribute('content');
-      }
-    }
-    return '';
-  }
-
-  function offsetURL(url) {
-    var offset = getMeta('distill:offset');
-    return offset ? offset + '/' + url : url;
-  }
-
-  function createFuseIndex() {
-
-    // create fuse index
-    var options = {
-      keys: [
-        { name: 'title', weight: 20 },
-        { name: 'categories', weight: 15 },
-        { name: 'description', weight: 10 },
-        { name: 'contents', weight: 5 },
-      ],
-      ignoreLocation: true,
-      threshold: 0
-    };
-    var fuse = new window.Fuse([], options);
-
-    // fetch the main search.json
-    return fetch(offsetURL('search.json'))
-      .then(function(response) {
-        if (response.status == 200) {
-          return response.json().then(function(json) {
-            // index main articles
-            json.articles.forEach(function(article) {
-              fuse.add(article);
-            });
-            // download collections and index their articles
-            return Promise.all(json.collections.map(function(collection) {
-              return fetch(offsetURL(collection)).then(function(response) {
-                if (response.status === 200) {
-                  return response.json().then(function(articles) {
-                    articles.forEach(function(article) {
-                      fuse.add(article);
-                    });
-                  })
-                } else {
-                  return Promise.reject(
-                    new Error('Unexpected status from search index request: ' +
-                              response.status)
-                  );
-                }
-              });
-            })).then(function() {
-              return fuse;
-            });
-          });
-
-        } else {
-          return Promise.reject(
-            new Error('Unexpected status from search index request: ' +
-                        response.status)
-          );
-        }
-      });
-  }
-
-  window.document.addEventListener("DOMContentLoaded", function (event) {
-
-    // get search element (bail if we don't have one)
-    var searchEl = window.document.getElementById('distill-search');
-    if (!searchEl)
-      return;
-
-    createFuseIndex()
-      .then(function(fuse) {
-
-        // make search box visible
-        searchEl.classList.remove('hidden');
-
-        // initialize autocomplete
-        var options = {
-          autoselect: true,
-          hint: false,
-          minLength: 2,
-        };
-        window.autocomplete(searchEl, options, [{
-          source: function(query, callback) {
-            const searchOptions = {
-              isCaseSensitive: false,
-              shouldSort: true,
-              minMatchCharLength: 2,
-              limit: 10,
-            };
-            var results = fuse.search(query, searchOptions);
-            callback(results
-              .map(function(result) { return result.item; })
-            );
-          },
-          templates: {
-            suggestion: function(suggestion) {
-              var img = suggestion.preview && Object.keys(suggestion.preview).length > 0
-                ? `<img src="${offsetURL(suggestion.preview)}"</img>`
-                : '';
-              var html = `
-                <div class="search-item">
-                  <h3>${suggestion.title}</h3>
-                  <div class="search-item-description">
-                    ${suggestion.description || ''}
-                  </div>
-                  <div class="search-item-preview">
-                    ${img}
-                  </div>
-                </div>
-              `;
-              return html;
-            }
-          }
-        }]).on('autocomplete:selected', function(event, suggestion) {
-          window.location.href = offsetURL(suggestion.path);
-        });
-        // remove inline display style on autocompleter (we want to
-        // manage responsive display via css)
-        $('.algolia-autocomplete').css("display", "");
-      })
-      .catch(function(error) {
-        console.log(error);
-      });
-
-  });
-
-  </script>
-
-  <style type="text/css">
-
-  .nav-search {
-    font-size: x-small;
-  }
-
-  /* Algolioa Autocomplete */
-
-  .algolia-autocomplete {
-    display: inline-block;
-    margin-left: 10px;
-    vertical-align: sub;
-    background-color: white;
-    color: black;
-    padding: 6px;
-    padding-top: 8px;
-    padding-bottom: 0;
-    border-radius: 6px;
-    border: 1px #0F2E3D solid;
-    width: 180px;
-  }
-
-
-  @media screen and (max-width: 768px) {
-    .distill-site-nav .algolia-autocomplete {
-      display: none;
-      visibility: hidden;
-    }
-    .distill-site-nav.responsive .algolia-autocomplete {
-      display: inline-block;
-      visibility: visible;
-    }
-    .distill-site-nav.responsive .algolia-autocomplete .aa-dropdown-menu {
-      margin-left: 0;
-      width: 400px;
-      max-height: 400px;
-    }
-  }
-
-  .algolia-autocomplete .aa-input, .algolia-autocomplete .aa-hint {
-    width: 90%;
-    outline: none;
-    border: none;
-  }
-
-  .algolia-autocomplete .aa-hint {
-    color: #999;
-  }
-  .algolia-autocomplete .aa-dropdown-menu {
-    width: 550px;
-    max-height: 70vh;
-    overflow-x: visible;
-    overflow-y: scroll;
-    padding: 5px;
-    margin-top: 3px;
-    margin-left: -150px;
-    background-color: #fff;
-    border-radius: 5px;
-    border: 1px solid #999;
-    border-top: none;
-  }
-
-  .algolia-autocomplete .aa-dropdown-menu .aa-suggestion {
-    cursor: pointer;
-    padding: 5px 4px;
-    border-bottom: 1px solid #eee;
-  }
-
-  .algolia-autocomplete .aa-dropdown-menu .aa-suggestion:last-of-type {
-    border-bottom: none;
-    margin-bottom: 2px;
-  }
-
-  .algolia-autocomplete .aa-dropdown-menu .aa-suggestion .search-item {
-    overflow: hidden;
-    font-size: 0.8em;
-    line-height: 1.4em;
-  }
-
-  .algolia-autocomplete .aa-dropdown-menu .aa-suggestion .search-item h3 {
-    font-size: 1rem;
-    margin-block-start: 0;
-    margin-block-end: 5px;
-  }
-
-  .algolia-autocomplete .aa-dropdown-menu .aa-suggestion .search-item-description {
-    display: inline-block;
-    overflow: hidden;
-    height: 2.8em;
-    width: 80%;
-    margin-right: 4%;
-  }
-
-  .algolia-autocomplete .aa-dropdown-menu .aa-suggestion .search-item-preview {
-    display: inline-block;
-    width: 15%;
-  }
-
-  .algolia-autocomplete .aa-dropdown-menu .aa-suggestion .search-item-preview img {
-    height: 3em;
-    width: auto;
-    display: none;
-  }
-
-  .algolia-autocomplete .aa-dropdown-menu .aa-suggestion .search-item-preview img[src] {
-    display: initial;
-  }
-
-  .algolia-autocomplete .aa-dropdown-menu .aa-suggestion.aa-cursor {
-    background-color: #eee;
-  }
-  .algolia-autocomplete .aa-dropdown-menu .aa-suggestion em {
-    font-weight: bold;
-    font-style: normal;
-  }
-
-  </style>
-
-
   <!--/radix_placeholder_navigation_in_header-->
   <!--radix_placeholder_distill-->
 
@@ -2036,18 +1438,34 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </script>
 
   <!--/radix_placeholder_distill-->
-  <script src="site_libs/header-attrs-2.11/header-attrs.js"></script>
-  <script src="site_libs/popper-2.6.0/popper.min.js"></script>
-  <link href="site_libs/tippy-6.2.7/tippy.css" rel="stylesheet" />
-  <link href="site_libs/tippy-6.2.7/tippy-light-border.css" rel="stylesheet" />
-  <script src="site_libs/tippy-6.2.7/tippy.umd.min.js"></script>
-  <script src="site_libs/anchor-4.2.2/anchor.min.js"></script>
-  <script src="site_libs/bowser-1.9.3/bowser.min.js"></script>
-  <script src="site_libs/webcomponents-2.0.0/webcomponents.js"></script>
-  <script src="site_libs/distill-2.2.21/template.v2.js"></script>
+  <script src="machine-learning-to-get-stuff-done_files/header-attrs-2.11/header-attrs.js"></script>
+  <script src="machine-learning-to-get-stuff-done_files/twitter-widget-0.0.1/widgets.js"></script>
+  <script src="machine-learning-to-get-stuff-done_files/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+  <script src="machine-learning-to-get-stuff-done_files/popper-2.6.0/popper.min.js"></script>
+  <link href="machine-learning-to-get-stuff-done_files/tippy-6.2.7/tippy.css" rel="stylesheet" />
+  <link href="machine-learning-to-get-stuff-done_files/tippy-6.2.7/tippy-light-border.css" rel="stylesheet" />
+  <script src="machine-learning-to-get-stuff-done_files/tippy-6.2.7/tippy.umd.min.js"></script>
+  <script src="machine-learning-to-get-stuff-done_files/anchor-4.2.2/anchor.min.js"></script>
+  <script src="machine-learning-to-get-stuff-done_files/bowser-1.9.3/bowser.min.js"></script>
+  <script src="machine-learning-to-get-stuff-done_files/webcomponents-2.0.0/webcomponents.js"></script>
+  <script src="machine-learning-to-get-stuff-done_files/distill-2.2.21/template.v2.js"></script>
   <!--radix_placeholder_site_in_header-->
   <!--/radix_placeholder_site_in_header-->
+  <!DOCTYPE html>
+  <html lang="en" dir="ltr">
+    <head>
+      <meta charset="utf-8">
+      <title></title>
+    </head>
+    <body>
+      <div class="article-header">
+        <img src="cranes.webp" class="article-banner" alt="">
+      </div>
+      </a>
+    </body>
+  </html>
 
+  <link rel="stylesheet" href="ml.css" type="text/css"/>
 
 </head>
 
@@ -2056,66 +1474,94 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <!--radix_placeholder_front_matter-->
 
 <script id="distill-front-matter" type="text/json">
-{"title":"About me","authors":[]}
+{"title":"Machine Learning To Get Stuff Done","description":"How I read 38,000 PET-CT reports in a matter of minutes.","authors":[{"author":"Chris McMaster","authorURL":"https://chrismcmaster.com","affiliation":"&nbsp;","affiliationURL":"#","orcidID":""}],"publishedDate":"2022-01-29T00:00:00.000+11:00","citationText":"McMaster, 2022"}
 </script>
 
 <!--/radix_placeholder_front_matter-->
 <!--radix_placeholder_navigation_before_body-->
-<header class="header header--fixed" role="banner">
-<nav class="distill-site-nav distill-site-header">
-<div class="nav-left">
-<a class="logo" href="https://www.chrismcmaster.com">
-<img src="icon/logo.png" alt="Logo"/>
-</a>
-<a href="index.html" class="title">Chris McMaster</a>
-<input id="distill-search" class="nav-search hidden" type="text" placeholder="Search..."/>
-</div>
-<div class="nav-right">
-<a href="index.html">Home</a>
-<a href="about.html">About</a>
-<a href="https://scholar.google.co.uk/citations?user=saf4O9kAAAAJ">
-<i class="fas fa-graduation-cap" aria-hidden="true"></i>
-</a>
-<a href="https://github.com/cmcmaster1">
-<i class="fab fa-github" aria-hidden="true"></i>
-</a>
-<a href="https://www.linkedin.com/in/mcmastc1/">
-<i class="fab fa-linkedin" aria-hidden="true"></i>
-</a>
-<a href="javascript:void(0);" class="nav-toggle">&#9776;</a>
-</div>
-</nav>
-</header>
 <!--/radix_placeholder_navigation_before_body-->
 <!--radix_placeholder_site_before_body-->
 <!--/radix_placeholder_site_before_body-->
 
 <div class="d-title">
-<h1>About me</h1>
+<h1>Machine Learning To Get Stuff Done</h1>
 <!--radix_placeholder_categories-->
 <!--/radix_placeholder_categories-->
-
+<p><p>How I read 38,000 PET-CT reports in a matter of minutes.</p></p>
 </div>
 
+<div class="d-byline">
+  Chris McMaster <a href="https://chrismcmaster.com" class="uri">https://chrismcmaster.com</a> 
+  
+<br/>2022-01-29
+</div>
 
 <div class="d-article">
-<p>I am a physician (rheumatology and clinical pharmacology) and clinical data scientist. Aside from my clinical work, I am the Data Science Lead in the Medicines Optimisation Service at Austin Health and a PhD student at the University of Melbourne, studying applied machine learning in pharmacovigilance.</p>
-<h2 id="education">Education</h2>
-<ul>
-<li><p>PhD in Machine Learning<br />
-University of Melbourne<br />
-2021 - present</p></li>
-<li><p>Bachelor of Medicine/Bachelor of Surgery<br />
-University of Melbourne<br />
-2009 - 2013</p></li>
-<li><p>Bachelor of Science / Bachelor of Arts<br />
-University of Tasmania<br />
-2005 - 2008</p></li>
-<li><p>Graduate Diploma in Biostatistics<br />
-Monash University<br />
-2012-2015</p></li>
-</ul>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
+<p>I tend to think that there are three categories of machine learning problems. Sometimes machine learning can be really expansive, using sophisticated tools to forge new ground in science. Sometimes it can be incredibly powerful, building large-scale models to perform complex tasks. And sometimes, it can just be the most efficient way to get things done. This is an example of that last category.</p>
+<h3 id="problem">Problem</h3>
+<p>I have a project that falls into categories 1 &amp; 2, but in order to do that I need data. Specifically, I need PET-CT scans with features of polymyalgia rheumatica (PMR). But how would I find these? Nobody records this data, it doesn’t exist in a structured, searchable form. But we do have reports — these might technically be searchable, but I don’t think I can easily devise a search term that will capture all the different ways that PMR can be described on a PET-CT report (including many instances where some classic features are described but the words “polymyalgia rheumatica” never appear in the report).</p>
+<h3 id="solution">Solution</h3>
+<p>I chose to tackle this as a machine learning problem. Specifically, a supervised learning problem. But to do this I needed data. The first step is always to collect data.</p>
+<h3 id="data-collection">Data Collection</h3>
+<p>I needed a collection of PET-CT reports and I needed labels for this reports. I originally thought that I would label words and phrases within the reports to do <em>named entity recognition</em>, a task that involves training a model to identify these features in text. But there are many potential PMR features noted in PET-CT reports, making this a fairly time-consuming process. Instead I settled on simply classifying the reports as either <strong>PMR</strong> or <strong>Not PMR</strong>.</p>
+<p>To generate this data, I turned to my data annotation tool <a href="prodi.gy">prodigy</a>. I wrote a custom data loader using an SQL query and some python code to trim the reports so they just contained the reporting physicians notes and conclusion — this last step is necessary because the text of the original request can bias the model and ultimately doesn’t contain information about the PET-CT itself. This code pulls PET-CT reports directly from our research data warehouse one at a time, so no intermediate step is required to generate a large CSV file or spreadsheet. You can try a demo of prodigy <a href="https://prodi.gy/demo">here</a> — it has a clean, intuitive interface and is a breeze to customize for specific tasks.</p>
+<figure>
+<img src="prodigy.svg" title="Prodigy in action" alt="An example of the prodigy interface." /><figcaption aria-hidden="true">An example of the prodigy interface.</figcaption>
+</figure>
+<h3 id="training-an-initial-model">Training an Initial Model</h3>
+<p>I originally trained a quick model in R to obtain a baseline and confirm that this was all feasible. For this I generated skip-grams (n=3, k=1) and performed <strong>term frequency–inverse document frequency (TF-IDF)</strong> to obtain the features. The very quick explanation of this is that I pulled out single words and clusters of up to three words (the skip part means that those words do not have to be adjacent, but may be separated by 1 word), I then counted how many times these skip grams occurred in each report and normalised this by the frequency across all reports (so that infrequent skip grams carry more value). I then trained a XGBoost model on these features to classify reports as being either <strong>PMR</strong> or <strong>Not PMR</strong>.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidymodels)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(textrecipes)</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(fastshap)</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Split the data into trian and test</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>split <span class="ot">&lt;-</span> <span class="fu">initial_split</span>(<span class="at">data =</span> data, <span class="at">strata =</span> pmr, <span class="at">prop =</span> .<span class="dv">8</span>)</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>train <span class="ot">&lt;-</span> <span class="fu">training</span>(split)</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>test <span class="ot">&lt;-</span> <span class="fu">testing</span>(split)</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Specify the recipe that creates skip grams, retains only the 1000 most common skip grams, then performs TF-IDF</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>rec <span class="ot">&lt;-</span> <span class="fu">recipe</span>(pmr <span class="sc">~</span> text, <span class="at">data =</span> train) <span class="sc">%&gt;%</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">step_tokenize</span>(text, <span class="at">token =</span> <span class="st">&quot;skip_ngrams&quot;</span>, <span class="at">options =</span> <span class="fu">list</span>(<span class="at">n_min =</span> <span class="dv">1</span>, <span class="at">n =</span> <span class="dv">3</span>, <span class="at">k =</span> <span class="dv">1</span>)) <span class="sc">%&gt;%</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">step_tokenfilter</span>(text, <span class="at">max_tokens =</span> <span class="dv">1000</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">step_tfidf</span>(text)</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="co"># Specify the xgboost model with some hyperparameters</span></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>model <span class="ot">&lt;-</span> <span class="fu">boost_tree</span>(<span class="at">trees =</span> <span class="dv">1000</span>, </span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>                    <span class="at">mtry =</span> <span class="dv">10</span>, </span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>                    <span class="at">min_n =</span> <span class="dv">3</span>,</span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>                    <span class="at">tree_depth =</span> <span class="dv">5</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>  <span class="fu">set_engine</span>(<span class="st">&quot;xgboost&quot;</span>, <span class="at">eval_metric =</span> <span class="st">&#39;error&#39;</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>  <span class="fu">set_mode</span>(<span class="st">&quot;classification&quot;</span>)</span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a><span class="co"># Connect the recipe and model in a workflow</span></span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>wf <span class="ot">&lt;-</span> <span class="fu">workflow</span>() <span class="sc">%&gt;%</span></span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>  <span class="fu">add_recipe</span>(rec) <span class="sc">%&gt;%</span></span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>  <span class="fu">add_model</span>(model) <span class="sc">%&gt;%</span> </span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a>  <span class="fu">fit</span>(train)</span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a><span class="co"># Specify the metrics we would like to report</span></span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a>model_metrics <span class="ot">&lt;-</span> <span class="fu">metric_set</span>(roc_auc, pr_auc, accuracy)</span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a><span class="co"># Trian the model on the train set and test on test set (as specified by split)</span></span>
+<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a>res <span class="ot">&lt;-</span> <span class="fu">last_fit</span>(wf, split, <span class="at">metrics =</span> model_metrics)</span></code></pre></div>
+<p>This model has an AUC of about 0.95 and an accuracy of just over 90% — a pretty good start! Examining the Shapley values (a way of estimating the contribution of each skip gram to the model prediction), it seems to be using some of those PMR features (particularly ischial tuberosities), but there probably some spurious features here. My feeling is that this model will probably suffer from over-fitting.</p>
+<figure>
+<img src="images/paste-35A12A44.png" title="Shaplet Values" alt="Shapley values from the XGBoost model." /><figcaption aria-hidden="true">Shapley values from the XGBoost model.</figcaption>
+</figure>
+<h3 id="training-a-transformers-model">Training a Transformers Model</h3>
+<p>This is when I moved back to python and the Hugging Face 🤗 <a href="https://huggingface.co/docs/transformers/index">Transformers library</a>. I have previously pre-trained a model on a large number of documents from our hospital, which I then used for <a href="https://www.medrxiv.org/content/10.1101/2021.12.11.21267504v2">Adverse Drug Reaction detection</a>. Since then, I have updated this pre-trained model, training on well over 1 million documents (discharge summaries, radiology reports, pathology reports, progress notes). This means that we can start with a model that has a good idea of the general structure and content of our documents, including medical imaging reports.</p>
+<p>I fine-tuned this model on my small dataset of labelled PET-CT reports, which took less than 1 minute on 3x 1080ti GPUs that we have running in our department. The final ROC curve looks pretty good!</p>
+<div class="layout-chunk" data-layout="l-body">
+<p><img src="machine-learning-to-get-stuff-done_files/figure-html5/unnamed-chunk-1-1.png" width="624" /></p>
+</div>
+<h3 id="reading-38000-reports">Reading 38,000 Reports</h3>
+<p>Finally, I was able to pull every PET-CT report from our research data warehouse and run the model across them to see how many contained PMR features. That’s where I got the 305 number that I tweeted about.</p>
+<div class="layout-chunk" data-layout="l-body">
+<blockquote class="twitter-tweet" data-width="550" data-lang="en" data-dnt="true" data-theme="light"><p lang="en" dir="ltr">How many of the 38,000 PET scan reports at my hospital were reported to have features of polymyalgia rheumatica? 305. Did I read all 38,000 to find this out? Hell no, I built a model to do it for me.</p>&mdash; Christopher McMaster (@DrCMcMaster) <a href="https://twitter.com/DrCMcMaster/status/1486592038862655498?ref_src=twsrc%5Etfw">January 27, 2022</a></blockquote>
+
+</div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->
 </div>

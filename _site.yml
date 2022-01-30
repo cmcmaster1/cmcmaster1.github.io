@@ -2,12 +2,16 @@ name: "blog"
 title: "Chris McMaster"
 description: |
   Chris McMaster
+favicon: icon/favicon.ico
 output_dir: "docs"
 collections:
   posts
 twitter:
   site: "@DrCMcMaster"
 navbar:
+  logo:
+      image: "icon/logo.png"
+      href: https://www.chrismcmaster.com
   right:
     - text: "Home"
       href: index.html
