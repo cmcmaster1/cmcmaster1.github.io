@@ -1,0 +1,36 @@
+---
+title: "Artificial Intelligence Can Save Pharmacovigilance in Australia"
+description: |
+  Pharmacovigilance can be saved by AI, but it will require time, effort and investment.
+author:
+  - name: Julia Chan
+  - name: David Liew
+  - name: Jana Stojanova
+  - name: Chris McMaster
+date: 2022-02-09
+output:
+  distill::distill_article:
+    self_contained: false
+draft: false
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+library(rvest)
+library(tidyverse)
+
+article <- read_html("https://globalforum.diaglobal.org/issue/january-2022/artificial-intelligence-can-save-pharmacovigilance-in-australia/")
+```
+
+*Reprinted from [DIA Global Forum](https://globalforum.diaglobal.org/issue/january-2022/artificial-intelligence-can-save-pharmacovigilance-in-australia/).*
+
+```{r results='asis'}
+article %>% 
+  html_element(xpath = "/html/body/div[1]/div[2]/div/article/div/div/div") %>% 
+  html_elements("p, .dropcap") %>% 
+  as.character() %>% 
+  `[`(-1) %>% 
+  str_c(collapse = "\n\n") %>% 
+  str_remove_all('</*p>|<div class="dropcap">|</div>\n\n') %>% 
+  cat()
+```

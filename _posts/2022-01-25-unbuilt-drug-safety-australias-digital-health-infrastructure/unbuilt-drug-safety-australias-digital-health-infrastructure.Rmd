@@ -4,7 +4,7 @@ description: |
   The problem of drug safety is a window into Australia's failure to invest in centralised digital health infrasctructure.
 author:
   - name: Chris McMaster
-    affiliation: University of Melbourne
+    affiliation: University of Melbourne, Austin Health
     url: https://chrismcmaster.com
 date: 2022-01-30
 draft: false

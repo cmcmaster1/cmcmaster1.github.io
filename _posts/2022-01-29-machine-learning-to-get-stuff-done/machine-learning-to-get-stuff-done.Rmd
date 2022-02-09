@@ -4,6 +4,7 @@ description: |
   How I read 38,000 PET-CT reports in a matter of minutes.
 author:
   - name: Chris McMaster
+    affiliation: University of Melbourne, Austin Health
     url: https://chrismcmaster.com
 date: 2022-01-29
 output:
@@ -43,7 +44,7 @@ To generate this data, I turned to my data annotation tool [prodigy](prodi.gy). 
 
 I originally trained a quick model in R to obtain a baseline and confirm that this was all feasible. For this I generated skip-grams (n=3, k=1) and performed **term frequency--inverse document frequency (TF-IDF)** to obtain the features. The very quick explanation of this is that I pulled out single words and clusters of up to three words (the skip part means that those words do not have to be adjacent, but may be separated by 1 word), I then counted how many times these skip grams occurred in each report and normalised this by the frequency across all reports (so that infrequent skip grams carry more value). I then trained a XGBoost model on these features to classify reports as being either **PMR** or **Not PMR**.
 
-``` R
+``` r
 library(tidyverse)
 library(tidymodels)
 library(textrecipes)
@@ -79,7 +80,6 @@ model_metrics <- metric_set(roc_auc, pr_auc, accuracy)
 
 # Trian the model on the train set and test on test set (as specified by split)
 res <- last_fit(wf, split, metrics = model_metrics)
-
 ```
 
 This model has an AUC of about 0.95 and an accuracy of just over 90% --- a pretty good start! Examining the Shapley values (a way of estimating the contribution of each skip gram to the model prediction), it seems to be using some of those PMR features (particularly ischial tuberosities), but there probably some spurious features here. My feeling is that this model will probably suffer from over-fitting.
