@@ -11,7 +11,11 @@ date: 2022-02-09
 output:
   distill::distill_article:
     self_contained: false
-draft: false
+    includes:
+        in_header: banner.html
+draft: true
+preview: preview.jpeg
+css: banner.css
 ---
 
 ```{r setup, include=FALSE}
