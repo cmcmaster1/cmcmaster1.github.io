@@ -21,6 +21,29 @@ css: banner.css
 knitr::opts_chunk$set(echo = FALSE, highlight = TRUE, class.source="bg-success")
 ```
 
+```{js}
+const expandElements = shouldExpand => {
+        let detailsElements = document.querySelectorAll("details");
+        
+        detailsElements = [...detailsElements];
+
+        if (shouldExpand) {
+            detailsElements.map(item => item.setAttribute("open", shouldExpand));
+        } else {
+            detailsElements.map(item => item.removeAttribute("open"));
+        }
+    };
+
+```
+
+```{r, echo=FALSE, results='asis'}
+html <- '
+<button onClick="expandElements(true)">Expand</button>
+<button onClick="expandElements(false)">Collapse</button>
+'
+cat(html)
+```
+
 # What's this and why should I care?
 
 If you're reading this, I presume you have at least a cursory interest in natural language processing (NLP). Either that or I have made you read this. Regardless, this primer on NLP for clinicians will show you how modern NLP works and how it can be applied in clinical medicine. The reasons *why* are almost too many to mention. Aside from the interesting knowledge we might gain, NLP is an extremely practical tool. We spend our lives reading text --- journals, articles, progress notes, you name it, we're constantly reading to absorb new information. So much of this can be simplified, streamlined, automated and improved with NLP. From conducting audits to summarising the latest literature, NLP can make our lives easier. Hopefully this sparks some ideas and becomes the start of that path for you. We will start with tokenization.
@@ -71,7 +94,7 @@ notes = [
 
 # Tokenization
 
-Let's pretend we have a large number of clinical notes (we will refer to this as a ***corpus***) and we want to represent those in such a way that they can be used used by a machine learning model. We can think about this by examining the first snippet from our corpus (there are 10 other brief notes that I won't show):
+Let's pretend we have a large number of clinical notes (we will refer to this as a ***corpus***) and we want to represent those in such a way that they can be used by a machine learning model. We can think about this by examining the first snippet from our corpus (there are 10 other brief notes that I won't show):
 
 ```{python echo=FALSE}
 print(notes[0])
@@ -89,9 +112,9 @@ Our simple tokenizer has problems, particularly as the number of documents begin
 
 Subword tokenization refers to a group of tokenization techniques that allow us to optimally tokenize a corpus of text with a limited vocabulary (where we get to choose how large that is). We're going to explain this using the simplest subword tokenizer, **byte pair encoding (BPE)**.
 
-## Bype Pair Encoding
+## Byte Pair Encoding
 
-We will get into the details of BPE later. For now, if you're following along with the code we will import our libraries and instantiate a BPE.
+We will get into the details of Byte Pair Encoding (BPE) later. For now, if you're following along with the code we will import our libraries and instantiate a BPE.
 
 ```{python echo=TRUE, code_folding=TRUE}
 from tokenizers import Tokenizer

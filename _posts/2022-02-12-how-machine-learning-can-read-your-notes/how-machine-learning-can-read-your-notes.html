@@ -120,7 +120,7 @@ code span.wa { color: #da4453; } /* Warning */
   <!--/radix_placeholder_rmarkdown_metadata-->
   
   <script type="text/json" id="radix-resource-manifest">
-  {"type":"character","attributes":{},"value":["banner_html.html","banner.css","banner.html","banner.jpeg","banner.jpg","banner.png","banner.svg","BPE.drawio.svg","how-machine-learning-can-read-your-notes_files/anchor-4.2.2/anchor.min.js","how-machine-learning-can-read-your-notes_files/bowser-1.9.3/bowser.min.js","how-machine-learning-can-read-your-notes_files/DiagrammeR-styles-0.2/styles.css","how-machine-learning-can-read-your-notes_files/distill-2.2.21/template.v2.js","how-machine-learning-can-read-your-notes_files/grViz-binding-1.0.8/grViz.js","how-machine-learning-can-read-your-notes_files/header-attrs-2.11/header-attrs.js","how-machine-learning-can-read-your-notes_files/htmlwidgets-1.5.4/htmlwidgets.js","how-machine-learning-can-read-your-notes_files/jquery-3.6.0/jquery-3.6.0.js","how-machine-learning-can-read-your-notes_files/jquery-3.6.0/jquery-3.6.0.min.js","how-machine-learning-can-read-your-notes_files/jquery-3.6.0/jquery-3.6.0.min.map","how-machine-learning-can-read-your-notes_files/popper-2.6.0/popper.min.js","how-machine-learning-can-read-your-notes_files/tippy-6.2.7/tippy-bundle.umd.min.js","how-machine-learning-can-read-your-notes_files/tippy-6.2.7/tippy-light-border.css","how-machine-learning-can-read-your-notes_files/tippy-6.2.7/tippy.css","how-machine-learning-can-read-your-notes_files/tippy-6.2.7/tippy.umd.min.js","how-machine-learning-can-read-your-notes_files/viz-1.8.2/viz.js","how-machine-learning-can-read-your-notes_files/webcomponents-2.0.0/webcomponents.js"]}
+  {"type":"character","attributes":{},"value":["banner_html.html","banner.css","banner.html","banner.jpeg","banner.jpg","banner.png","banner.svg","BPE.drawio.svg","how-machine-learning-can-read-your-notes_files/anchor-4.2.2/anchor.min.js","how-machine-learning-can-read-your-notes_files/bowser-1.9.3/bowser.min.js","how-machine-learning-can-read-your-notes_files/DiagrammeR-styles-0.2/styles.css","how-machine-learning-can-read-your-notes_files/distill-2.2.21/template.v2.js","how-machine-learning-can-read-your-notes_files/grViz-binding-1.0.8/grViz.js","how-machine-learning-can-read-your-notes_files/header-attrs-2.11/header-attrs.js","how-machine-learning-can-read-your-notes_files/htmlwidgets-1.5.4/htmlwidgets.js","how-machine-learning-can-read-your-notes_files/jquery-3.6.0/jquery-3.6.0.js","how-machine-learning-can-read-your-notes_files/jquery-3.6.0/jquery-3.6.0.min.js","how-machine-learning-can-read-your-notes_files/jquery-3.6.0/jquery-3.6.0.min.map","how-machine-learning-can-read-your-notes_files/popper-2.6.0/popper.min.js","how-machine-learning-can-read-your-notes_files/tippy-6.2.7/tippy-bundle.umd.min.js","how-machine-learning-can-read-your-notes_files/tippy-6.2.7/tippy-light-border.css","how-machine-learning-can-read-your-notes_files/tippy-6.2.7/tippy.css","how-machine-learning-can-read-your-notes_files/tippy-6.2.7/tippy.umd.min.js","how-machine-learning-can-read-your-notes_files/viz-1.8.2/viz.js","how-machine-learning-can-read-your-notes_files/webcomponents-2.0.0/webcomponents.js","launch.ica"]}
   </script>
   <!--radix_placeholder_navigation_in_header-->
   <!--/radix_placeholder_navigation_in_header-->
@@ -1503,14 +1503,38 @@ code span.wa { color: #da4453; } /* Warning */
 </div>
 
 <div class="d-article">
+<div class="layout-chunk" data-layout="l-body">
+<script type="text/javascript">
+const expandElements = shouldExpand => {
+        let detailsElements = document.querySelectorAll("details");
+        
+        detailsElements = [...detailsElements];
+
+        if (shouldExpand) {
+            detailsElements.map(item => item.setAttribute("open", shouldExpand));
+        } else {
+            detailsElements.map(item => item.removeAttribute("open"));
+        }
+    };
+
+</script>
+</div>
+<div class="layout-chunk" data-layout="l-body">
+<button onClick="expandElements(true)">
+Expand
+</button>
+<button onClick="expandElements(false)">
+Collapse
+</button>
+</div>
 <h1 id="whats-this-and-why-should-i-care">What’s this and why should I care?</h1>
 <p>If you’re reading this, I presume you have at least a cursory interest in natural language processing (NLP). Either that or I have made you read this. Regardless, this primer on NLP for clinicians will show you how modern NLP works and how it can be applied in clinical medicine. The reasons <em>why</em> are almost too many to mention. Aside from the interesting knowledge we might gain, NLP is an extremely practical tool. We spend our lives reading text — journals, articles, progress notes, you name it, we’re constantly reading to absorb new information. So much of this can be simplified, streamlined, automated and improved with NLP. From conducting audits to summarising the latest literature, NLP can make our lives easier. Hopefully this sparks some ideas and becomes the start of that path for you. We will start with tokenization.</p>
 <div class="layout-chunk" data-layout="l-body">
-<div id="htmlwidget-e33b8b78f8a0e7c4091e" style="width:624px;height:200px;" class="grViz html-widget"></div>
-<script type="application/json" data-for="htmlwidget-e33b8b78f8a0e7c4091e">{"x":{"diagram":"digraph flowchart {\n  node [fontname = arial, shape = oval, color = LightSalmon, style = filled]\n  tab1 [label = \"Tokenization\"]\n  \n  node [fontname = arial, shape = oval, color = Grey]\n  tab2 [label = \"Embeddings\"]\n  tab3 [label = \"Transformers\"]\n  \n  tab1 -> tab2 -> tab3;\n}","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-29f9f7f5a1be1c194720" style="width:624px;height:200px;" class="grViz html-widget"></div>
+<script type="application/json" data-for="htmlwidget-29f9f7f5a1be1c194720">{"x":{"diagram":"digraph flowchart {\n  node [fontname = arial, shape = oval, color = LightSalmon, style = filled]\n  tab1 [label = \"Tokenization\"]\n  \n  node [fontname = arial, shape = oval, color = Grey]\n  tab2 [label = \"Embeddings\"]\n  tab3 [label = \"Transformers\"]\n  \n  tab1 -> tab2 -> tab3;\n}","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
 </div>
 <h1 id="tokenization">Tokenization</h1>
-<p>Let’s pretend we have a large number of clinical notes (we will refer to this as a <strong><em>corpus</em></strong>) and we want to represent those in such a way that they can be used used by a machine learning model. We can think about this by examining the first snippet from our corpus (there are 10 other brief notes that I won’t show):</p>
+<p>Let’s pretend we have a large number of clinical notes (we will refer to this as a <strong><em>corpus</em></strong>) and we want to represent those in such a way that they can be used by a machine learning model. We can think about this by examining the first snippet from our corpus (there are 10 other brief notes that I won’t show):</p>
 <div class="layout-chunk" data-layout="l-body">
 <pre><code>(&#39;HOPC: 2 weeks of progressive exertional dysponea, now SOB at rest w/ maximum &#39;
  &#39;ET ~10m. Periphral oedema w/ pitting above knees bilaterally.&#39;)</code></pre>
@@ -1524,8 +1548,8 @@ code span.wa { color: #da4453; } /* Warning */
 <p>Each word is a data point, we could even convert this into a table and feed it in that way. Some cleverer ideas involve counting the frequency of each word and using that data (see <a href="https://en.wikipedia.org/wiki/Tf%E2%80%93idf">tf-idf</a>, although import information is lost in this process, namely the position of each word).</p>
 <p>Our simple tokenizer has problems, particularly as the number of documents begins to explode and therefore the number of unique words becomes unreasonably large. Additionally, each misspelling will be its own unique token, which might be okay for very common typos, but we would ideally like some way of coping with small variations in spelling that might occur less frequently.</p>
 <p>Subword tokenization refers to a group of tokenization techniques that allow us to optimally tokenize a corpus of text with a limited vocabulary (where we get to choose how large that is). We’re going to explain this using the simplest subword tokenizer, <strong>byte pair encoding (BPE)</strong>.</p>
-<h2 id="bype-pair-encoding">Bype Pair Encoding</h2>
-<p>We will get into the details of BPE later. For now, if you’re following along with the code we will import our libraries and instantiate a BPE.</p>
+<h2 id="byte-pair-encoding">Byte Pair Encoding</h2>
+<p>We will get into the details of Byte Pair Encoding (BPE) later. For now, if you’re following along with the code we will import our libraries and instantiate a BPE.</p>
 <div class="layout-chunk" data-layout="l-body">
 <details>
 <summary>
@@ -1586,7 +1610,7 @@ Show code
 </div>
 <p>We can look at the first 10 tokens in the vocabulary:</p>
 <div class="layout-chunk" data-layout="l-body">
-<pre><code>[&#39;m&#39;, &#39;med&#39;, &#39;mp&#39;, &#39;pone&#39;, &#39;ite&#39;, &#39;oed&#39;, &#39;dys&#39;, &#39;gn&#39;, &#39;exer&#39;, &#39;ng&#39;]</code></pre>
+<pre><code>[&#39;th&#39;, &#39;fee&#39;, &#39;d&#39;, &#39;.&#39;, &#39;p&#39;, &#39;or&#39;, &#39;to&#39;, &#39;is&#39;, &#39;st&#39;, &#39;ys&#39;]</code></pre>
 </div>
 <p>As you can see, these aren’t words. They are parts of words, carefully chosen by our algorithm to tokenize the most frequently occurring parts within our vocabulary limit.</p>
 <p>Finally, we can see what our text looks like after tokenization:</p>
