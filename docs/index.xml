@@ -12,17 +12,15 @@
       <link>https://chrismcmaster.com</link>
     </image>
     <generator>Distill</generator>
-    <lastBuildDate>Wed, 09 Feb 2022 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 12 Feb 2022 00:00:00 +0000</lastBuildDate>
     <item>
-      <title>Artificial Intelligence Can Save Pharmacovigilance in Australia</title>
-      <dc:creator>Julia Chan</dc:creator>
-      <dc:creator>David Liew</dc:creator>
-      <dc:creator>Jana Stojanova</dc:creator>
+      <title>A Primer on NLP for Clinicians: Part 1 - Tokenization</title>
       <dc:creator>Chris McMaster</dc:creator>
-      <link>https://chrismcmaster.com/posts/2022-02-09-artificial-intelligence-can-save-pharmacovigilance-in-australia</link>
-      <description>Pharmacovigilance can be saved by AI, but it will require time, effort and investment.</description>
-      <guid>https://chrismcmaster.com/posts/2022-02-09-artificial-intelligence-can-save-pharmacovigilance-in-australia</guid>
-      <pubDate>Wed, 09 Feb 2022 00:00:00 +0000</pubDate>
+      <link>https://chrismcmaster.com/posts/2022-02-12-how-machine-learning-can-read-your-notes</link>
+      <description>In this first part we talk about tokenization, the tool we use to make text readable by a machine.</description>
+      <guid>https://chrismcmaster.com/posts/2022-02-12-how-machine-learning-can-read-your-notes</guid>
+      <pubDate>Sat, 12 Feb 2022 00:00:00 +0000</pubDate>
+      <media:content url="https://chrismcmaster.com/posts/2022-02-12-how-machine-learning-can-read-your-notes/BPE.drawio.svg" medium="image" type="image/svg+xml"/>
     </item>
     <item>
       <title>Drug Safety &amp; Australia's Digital Health Infrastructure</title>
