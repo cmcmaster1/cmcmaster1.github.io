@@ -12,14 +12,14 @@
       <link>https://chrismcmaster.com</link>
     </image>
     <generator>Distill</generator>
-    <lastBuildDate>Sat, 12 Feb 2022 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 11 Feb 2022 00:00:00 +0000</lastBuildDate>
     <item>
       <title>A Primer on NLP for Clinicians: Part 1 - Tokenization</title>
       <dc:creator>Chris McMaster</dc:creator>
       <link>https://chrismcmaster.com/posts/2022-02-12-how-machine-learning-can-read-your-notes</link>
       <description>In this first part we talk about tokenization, the tool we use to make text readable by a machine.</description>
       <guid>https://chrismcmaster.com/posts/2022-02-12-how-machine-learning-can-read-your-notes</guid>
-      <pubDate>Sat, 12 Feb 2022 00:00:00 +0000</pubDate>
+      <pubDate>Fri, 11 Feb 2022 00:00:00 +0000</pubDate>
       <media:content url="https://chrismcmaster.com/posts/2022-02-12-how-machine-learning-can-read-your-notes/BPE.drawio.svg" medium="image" type="image/svg+xml"/>
     </item>
     <item>
