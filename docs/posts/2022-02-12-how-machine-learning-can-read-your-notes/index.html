@@ -134,7 +134,7 @@ code span.wa { color: #da4453; } /* Warning */
 <!--/radix_placeholder_rmarkdown_metadata-->
   
   <script type="text/json" id="radix-resource-manifest">
-  {"type":"character","attributes":{},"value":["banner.css","banner.html","banner.jpg","BPE.drawio.svg","how-machine-learning-can-read-your-notes_files/anchor-4.2.2/anchor.min.js","how-machine-learning-can-read-your-notes_files/bowser-1.9.3/bowser.min.js","how-machine-learning-can-read-your-notes_files/DiagrammeR-styles-0.2/styles.css","how-machine-learning-can-read-your-notes_files/distill-2.2.21/template.v2.js","how-machine-learning-can-read-your-notes_files/grViz-binding-1.0.8/grViz.js","how-machine-learning-can-read-your-notes_files/header-attrs-2.11/header-attrs.js","how-machine-learning-can-read-your-notes_files/htmlwidgets-1.5.4/htmlwidgets.js","how-machine-learning-can-read-your-notes_files/jquery-3.6.0/jquery-3.6.0.js","how-machine-learning-can-read-your-notes_files/jquery-3.6.0/jquery-3.6.0.min.js","how-machine-learning-can-read-your-notes_files/jquery-3.6.0/jquery-3.6.0.min.map","how-machine-learning-can-read-your-notes_files/popper-2.6.0/popper.min.js","how-machine-learning-can-read-your-notes_files/tippy-6.2.7/tippy-bundle.umd.min.js","how-machine-learning-can-read-your-notes_files/tippy-6.2.7/tippy-light-border.css","how-machine-learning-can-read-your-notes_files/tippy-6.2.7/tippy.css","how-machine-learning-can-read-your-notes_files/tippy-6.2.7/tippy.umd.min.js","how-machine-learning-can-read-your-notes_files/viz-1.8.2/viz.js","how-machine-learning-can-read-your-notes_files/webcomponents-2.0.0/webcomponents.js"]}
+  {"type":"character","attributes":{},"value":["banner.css","banner.html","banner.jpg","banner.svg","BPE.drawio.svg","how-machine-learning-can-read-your-notes_files/anchor-4.2.2/anchor.min.js","how-machine-learning-can-read-your-notes_files/bowser-1.9.3/bowser.min.js","how-machine-learning-can-read-your-notes_files/DiagrammeR-styles-0.2/styles.css","how-machine-learning-can-read-your-notes_files/distill-2.2.21/template.v2.js","how-machine-learning-can-read-your-notes_files/grViz-binding-1.0.8/grViz.js","how-machine-learning-can-read-your-notes_files/header-attrs-2.11/header-attrs.js","how-machine-learning-can-read-your-notes_files/htmlwidgets-1.5.4/htmlwidgets.js","how-machine-learning-can-read-your-notes_files/jquery-3.6.0/jquery-3.6.0.js","how-machine-learning-can-read-your-notes_files/jquery-3.6.0/jquery-3.6.0.min.js","how-machine-learning-can-read-your-notes_files/jquery-3.6.0/jquery-3.6.0.min.map","how-machine-learning-can-read-your-notes_files/popper-2.6.0/popper.min.js","how-machine-learning-can-read-your-notes_files/tippy-6.2.7/tippy-bundle.umd.min.js","how-machine-learning-can-read-your-notes_files/tippy-6.2.7/tippy-light-border.css","how-machine-learning-can-read-your-notes_files/tippy-6.2.7/tippy.css","how-machine-learning-can-read-your-notes_files/tippy-6.2.7/tippy.umd.min.js","how-machine-learning-can-read-your-notes_files/viz-1.8.2/viz.js","how-machine-learning-can-read-your-notes_files/webcomponents-2.0.0/webcomponents.js"]}
   </script>
   <!--radix_placeholder_navigation_in_header-->
 <meta name="distill:offset" content="../.."/>
@@ -2092,7 +2092,7 @@ gtag('config', 'G-6QL8PR3WC1');
     </head>
     <body>
       <div class="article-header">
-        <img src="banner.jpg" class="article-banner" alt="">
+        <img src="banner.svg" class="article-banner" alt="">
       </div>
       </a>
     </body>
@@ -2158,8 +2158,8 @@ gtag('config', 'G-6QL8PR3WC1');
 <h1 id="whats-this-and-why-should-i-care">What’s this and why should I care?</h1>
 <p>If you’re reading this, I presume you have at least a cursory interest in natural language processing (NLP). Either that or I have made you read this. Regardless, this primer on NLP for clinicians will show you how modern NLP works and how it can be applied in clinical medicine. The reasons <em>why</em> are almost too many to mention. Aside from the interesting knowledge we might gain, NLP is an extremely practical tool. We spend our lives reading text — journals, articles, progress notes, you name it, we’re constantly reading to absorb new information. So much of this can be simplified, streamlined, automated and improved with NLP. From conducting audits to summarising the latest literature, NLP can make our lives easier. Hopefully this sparks some ideas and becomes the start of that path for you. We will start with tokenization.</p>
 <div class="layout-chunk" data-layout="l-body">
-<div id="htmlwidget-c432b1a777ca38cd1bd9" style="width:624px;height:200px;" class="grViz html-widget"></div>
-<script type="application/json" data-for="htmlwidget-c432b1a777ca38cd1bd9">{"x":{"diagram":"digraph flowchart {\n  node [fontname = arial, shape = oval, color = LightSalmon, style = filled]\n  tab1 [label = \"Tokenization\"]\n  \n  node [fontname = arial, shape = oval, color = Grey]\n  tab2 [label = \"Embeddings\"]\n  tab3 [label = \"Transformers\"]\n  \n  tab1 -> tab2 -> tab3;\n}","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-e6ee81595f01f3006a5d" style="width:624px;height:200px;" class="grViz html-widget"></div>
+<script type="application/json" data-for="htmlwidget-e6ee81595f01f3006a5d">{"x":{"diagram":"digraph flowchart {\n  node [fontname = arial, shape = oval, color = LightSalmon, style = filled]\n  tab1 [label = \"Tokenization\"]\n  \n  node [fontname = arial, shape = oval, color = Grey]\n  tab2 [label = \"Embeddings\"]\n  tab3 [label = \"Transformers\"]\n  \n  tab1 -> tab2 -> tab3;\n}","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
 </div>
 <h1 id="tokenization">Tokenization</h1>
 <p>Let’s pretend we have a large number of clinical notes (we will refer to this as a <strong><em>corpus</em></strong>) and we want to represent those in such a way that they can be used used by a machine learning model. We can think about this by examining the first snippet from our corpus (there are 10 other brief notes that I won’t show):</p>
@@ -2238,7 +2238,7 @@ Show code
 </div>
 <p>We can look at the first 10 tokens in the vocabulary:</p>
 <div class="layout-chunk" data-layout="l-body">
-<pre><code>[&#39;che&#39;, &#39;q&#39;, &#39;t&#39;, &#39;8&#39;, &#39;ms&#39;, &#39;00&#39;, &#39;nec&#39;, &#39;ema&#39;, &#39;pone&#39;, &#39;y&#39;]</code></pre>
+<pre><code>[&#39;sob&#39;, &#39;eve&#39;, &#39;c&#39;, &#39;lik&#39;, &#39;ral&#39;, &#39;n&#39;, &#39;e&#39;, &#39;pro&#39;, &#39;mp&#39;, &#39;per&#39;]</code></pre>
 </div>
 <p>As you can see, these aren’t words. They are parts of words, carefully chosen by our algorithm to tokenize the most frequently occurring parts within our vocabulary limit.</p>
 <p>Finally, we can see what our text looks like after tokenization:</p>
