@@ -17,6 +17,8 @@ navbar:
       href: index.html
     - text: "About"
       href: about.html
+    - text: "Drug Shortages"
+      href: https://cmcmaster.shinyapps.io/rheumdrugshortages
     - icon: fas fa-graduation-cap
       href: https://scholar.google.co.uk/citations?user=saf4O9kAAAAJ
     - icon: fab fa-github
