@@ -1,0 +1,9 @@
+---
+title: "TGA Drug Shortages"
+editor_options: 
+  markdown: 
+    wrap: 72
+---
+
+
+<iframe src="https://cmcmaster.shinyapps.io/rheumdrugshortages" width="1200" height="800" style="border: none"></iframe>
